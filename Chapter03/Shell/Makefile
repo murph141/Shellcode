@@ -9,7 +9,7 @@ all: $(SOURCES) $(EXECUTABLE)
 
 .s:
 	$(AS) --32 $(SOURCES)
-	$(LD) -m elf_i386 a.out -o $(EXECUTABLE)
+	$(LD) -N -m elf_i386 a.out -o $(EXECUTABLE)
 
 clean:
 	rm -rf $(EXECUTABLE) a.out
